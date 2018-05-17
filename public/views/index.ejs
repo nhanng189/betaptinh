@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Calculator</title>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/Betaptinh.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="tittle" class="container container-margin">
+            <div class="col-md-11">
+                <div class="col-md-11">
+                    <h1>Bé tập tính</h1>
+                </div>
+            </div>
+        </div>
+        <div id="body" class="container container-margin">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="margin-text" for="input1">Số thứ nhất</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <form name="input1">
+                                    <input type="text" class="form-control" id="input1" onfocusout="delalarm(); focusout2(); focusout1()" placeholder="Nhập số thứ nhất">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="margin-text" for="input2">Số thứ hai</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <form name="input2">
+                                    <input type="text" class="form-control" id="input2" onfocusout="delalarm(); focusout1(); focusout2()" placeholder="Nhập số thứ hai">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="margin-text" for="ketqua">Kết quả</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <form name="ketqua">
+                                    <input type="text" class="form-control" id="ketqua" placeholder="Kết quả" readonly>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="margin-radio form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioCong" value="cong">
+                                <label class="form-check-label" for="radioCong">Cộng</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="margin-radio form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioTru" value="tru">
+                                <label class="form-check-label" for="radioTru">Trừ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="margin-radio form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioNhan" value="nhan">
+                                <label class="form-check-label" for="radioNhan">Nhân</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="margin-radio form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioChia" value="chia">
+                                <label class="form-check-label" for="radioChia">Chia</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button id="tinh" type="button" onclick="tinh()" class="btn btn-outline-dark">Tính</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-margin">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Thông báo</p>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="alarm" id="alarm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/Betaptinh.js"></script>
+</body>
+<html>
